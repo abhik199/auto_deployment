@@ -24,17 +24,10 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: |
-          npm ci
+        run: npm ci
 
       - name: Build
-        run: |
-          npm run build --if-present
+        run: npm run build --if-present
 
       - name: Restart application using PM2
-        run: |
-          # Make sure PM2 is installed globally
-          # npm install pm2 -g
-
-          # Restart the application using PM2
-          pm2 restart app.js
+        run: /home/ubuntu/.nvm/versions/node/v18.19.1/bin/pm2 restart app.js
