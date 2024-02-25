@@ -8,7 +8,10 @@ app.get("/", function (req, res) {
 });
 
 app.get("/api", function (req, res) {
-  return res.json({ message: "abhishek kirar" });
+  return res.json({
+    message:
+      "To use nested populate in Mongoose, you can chain multiple calls to the populate() method in a query chain. For example, let's say you have the following schema:",
+  });
 });
 
 app.listen(port, function () {
