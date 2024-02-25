@@ -14,6 +14,10 @@ app.get("/api", function (req, res) {
   });
 });
 
+app.get("/hello", function (req, res) {
+  res.json({ message: "new hello world" });
+});
+
 app.listen(port, function () {
   console.log(`listening on ${port}`);
 });
